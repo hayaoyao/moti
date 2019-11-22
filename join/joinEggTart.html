@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>摩提工房</title>
+	    <meta name="keywords" content="摩提工房" />
+	    <meta name="description" content="摩提工房" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	    <meta name="renderer" content="webkit"> 
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />		
+		<link rel="shortcut icon" href="../favicon.jpeg">
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../css/use.css" />		
+		<link rel="stylesheet" type="text/css" href="../css/join.css" />		
+		<link rel="stylesheet" type="text/css" href="../css/sweetalert.min.css" />		
+		<link rel="stylesheet" type="text/css" href="../css/animate.min.css" />	
+		<script src="../js/jquery-1.11.3.js"></script>			
+		<script src="js/joinPuff.js"></script>
+		<script src="js/messagejoin.js"></script>
+		<script src="js/sweetalert.min.js"></script>
+		<script src="../js/use.js"></script>
+		<script src="js/thisPage.js"></script>
+		<script src="../js/wow.min.js"></script>
+	</head>
+	<body>
+		<div class="generalize">
+			<div class="navbar navbarSon animated fadeInLeft" data-wow-duration="1s" id="navbar">
+			</div>				
+			<div class="headerTop" id="headerTop">	
+			</div>
+			<div class="nyphonetop clearfix">
+				<div class="waplogo">
+					<a href="/index.html">
+						<img src="../images/logo.png" />
+					</a>
+				</div>
+				<div class="phnavbtn">
+					<span></span>
+				</div>
+			</div>	
+			<div class="introduce">
+				<div class="join clearfix">
+					<h3>
+						<em>小宫山浩二</em>
+						<span>
+							<a href="../index.html">首页</a>>
+							<a href="join.html">加盟申请</a>>
+							小宫山浩二
+						</span>
+					</h3>	
+					<div class="division"></div>
+					<div class="explain clearfix">
+						<div class="explainLeft fl">
+							<img src="../images/food7.jpg"/>
+						</div>
+						<div class="explainRight fr" id="explainRight">
+						</div>
+					</div>					
+					<div class="flow" id="flow">
+					</div>
+					<div class="path" id="path">
+					</div>
+					<div class="joinForm" id="joinForm">
+						<h2>加盟申请</h2>
+						<ul class="clearfix">
+							<li>
+								<!--<input type="hidden" value="西树泡芙" id="Title"/>-->
+								<p>您的姓名</p>
+								<span>
+									<input type="text" id="FullName" placeholder="请输入您的姓名"/>
+								</span>
+							</li>
+							<li>
+								<p>性别</p>
+								<span>
+									<input type="radio" name="Sex" value="男" checked="checked"/>
+									<label>男</label>
+									<input type="radio" name="Sex" value="女" />
+									<label>女</label>
+								</span>
+							</li>
+							<li>
+								<p>电话号码</p>
+								<span>
+									<input type="text" id="Tel" placeholder="请输入您的号码"/>
+								</span>
+							</li>
+							<li>
+								<p>电子邮箱</p>
+								<span>
+									<input type="text" id="Email" placeholder="请输入您的邮箱"/>
+								</span>
+							</li>	
+							<li>
+								<p>所在城市</p>
+								<select id="sheng">
+									<option value="0">省/市</option>
+								</select>
+								<select id="shi" class="woxs">
+									<option value="0">市</option>
+								</select>
+								<input id="Address" type="text" placeholder="请输入您的详细地址">
+							</li>
+	                        <li>
+	                            <p>意向合作品牌</p>
+	                            <span>                                
+	                                <label for="9"><input id="9" name="pinpai" type="checkbox" value="西树泡芙">西树泡芙</label>                                    
+	                                <label for="8"><input id="8" name="pinpai" type="checkbox" value="摩提工房">摩提工房</label>
+	                               	<label for="7"> <input id="7" name="pinpai" type="checkbox" value="和米堂">和米堂</label>
+	                                <label for="6"><input id="6" name="pinpai" type="checkbox" value="一捧饭团">一捧饭团</label>
+	                                <label for="5"><input id="5" name="pinpai" type="checkbox" value="凯蒂优果">凯蒂优果</label>
+	                                <label for="4"><input id="4" name="pinpai" type="checkbox" value="茶庄园">茶庄园</label>
+	                                <label for="3"><input id="3" name="pinpai" type="checkbox" value="小宫山浩二">小宫山浩二</label>
+	                                <label for="2"><input id="2" name="pinpai" type="checkbox" value="T&C扒房">T&C扒房</label>                                  
+	                            </span>
+	                        </li>
+	                        <li>
+	                        	<p>您的留言</p>
+	                        	<textarea placeholder="请输入您的留言" id="Content"></textarea>
+	                        </li>
+	                        <li>
+	                        	<input type="button" value="确认提交" id="sub">
+	                        </li>               
+						</ul>
+					</div>
+				</div>				
+			</div>
+			<div class="footer footerSon clearfix" id="footer">
+			</div>	
+			<div class="copy copyright">
+				<p>Copyright © 2003 - 2019 上海摩提工房食品有限公司<span> 版权所有 沪ICP备12002561号-3</span></p>
+			</div>			
+		</div>
+		<div class="wapMenu" id="wapMenu">
+		</div>	
+		<div class="moveMenu" id="moveMenu">
+		</div>		
+		<div class="online" id="online"></div>
+		<script type="text/javascript">
+			$(function() {
+				_province();
+				$("#sheng").change(function() {
+					var code_p = $(this).val();
+					_city(code_p);
+				})
+			})
+			var code_p = "";
+			
+			function _province() {
+				$.ajax({
+					contentType: "application/json;charset=utf-8",
+					url: "js/province.json",
+					type: "GET",
+					crossDomain: true,
+					dataType: "json",
+					data: {},
+					success: function(data) {
+						console.log(data)
+						var html = "<option value=\"0\">省份</option>";
+						for(var i = 0; i < data.length; i++) {
+							html += "<option value=\"" + data[i].code_p + "\">" + data[i].name + "</option>";
+						}
+						code_p = $("#sheng").html(html).val();
+						_city(code_p);
+					}
+				});
+			}
+			
+			function _city(code_p) {
+				$("#shi").html("<option value=\"0\">市</option>");
+				$.ajax({
+					contentType: "application/json;charset=utf-8",
+					url: "js/city.json",
+					type: "GET",
+					crossDomain: true,
+					dataType: "json",
+					data: {
+						code_p: code_p
+					},
+					success: function(data) {
+						var html = "<option value=\"0\">市</option>";
+						$.each(data, function(key, v) {
+							$('#sheng').change(function() {
+								if($("#sheng").val() != data[key].code_p) {
+									return false
+								} else {
+									html += "<option value=\"" + data[key].code_c + "\">" + data[key].name + "</option>";
+			
+								}
+								$("#shi").html(html).val();
+							})
+						});
+			
+					}
+				});
+			}			
+		</script>
+	</body>
+</html>

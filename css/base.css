@@ -1,0 +1,93 @@
+@charset "utf-8";
+/***公共样式****/
+body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, b, small, u, i, center, dl, dt, dd, ol, ul, li,  sub, sup, tt, var, del, dfn,  ins, kbd, q, s, samp,  strike, applet, object, iframe, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, blockquote, pre, a, abbr, acronym, address, big, cite, code, mark, audio, video, textarea, input[type="button"],select { margin:0; padding:0; outline:none;-webkit-appearance: none; }	
+
+ol, ul{list-style:none;}
+
+html{overflow-x:hidden; -webkit-text-size-adjust:none;}
+
+body {font-size:14px;font-family: 'PingFang SC','Microsoft YaHei','Lantinghei SC','Helvetica Neue',Helvetica,Arial,"sans-serif";color:#666; line-height:1; }
+
+
+img{display:inline-block; max-width:100%; max-height:100%; border:none}
+/*a 链接*/
+a { text-decoration:none; outline:none;color:#666;}
+a:hover{color:#ff4343!important;transition:0.5s all;-webkit-transition:0.5s all;-moz-transition:0.5s all;-o-transition:0.5s all;-ms-transition:0.5s all;  }
+input,textarea{font-family: 'open sans','PingFang SC','Lantinghei SC','Helvetica Neue',Helvetica,Arial,'Microsoft YaHei',"sans-serif";}
+/*居中*/
+.juzhong{display: -webkit-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;-webkit-justify-content: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;
+-webkit-align-items: center; align-items: center;}
+
+.juzhong2{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;}
+
+/*浮动*/
+.fl{float:left;display:inline;}
+.fr{float:right; display:inline}
+.clear { clear:both}
+.clearfix { *zoom:1;}
+.clearfix:after{clear:both; display:block; height:0; visibility:hidden; line-height:0; content:'\20';}
+
+
+i,em{ font-style:normal;}
+/*图片居中*/
+.jzimg { display:table-cell; *display:block; overflow:hidden; font:0px/0px 'Arial'; text-align:center; vertical-align:middle;}
+fieldset, img { border:0; vertical-align:middle}
+
+.jzimg img,.jzimg i{vertical-align:middle; max-width:100%; max-height:100%;}
+.jzimg i{height:100%; display:inline-block;}
+
+
+/* HTML5 重置为较旧版本的浏览器 */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block;}
+blockquote, q{quotes:none;}
+blockquote:before, blockquote:after, q:before, q:after { content:''; content:none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* 按钮样式 */
+input, button, textarea, select { font-size:100%; outline:none;}
+input[type="button"]{cursor:pointer; border:0}
+input[type="submit"]{cursor:pointer; border:0}
+input[type="reset"]{cursor:pointer; border:0}
+
+
+/*删除火狐下按钮默认样式*/
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner{ border:none; padding:0;-webkit-appearance: none; }
+
+.banner li img,.newspic img,.dyximg div,.hotwen li img,.guangbox li img,.renwubox img,.xuepic img{transition:.7s;}
+.banner li:hover img,.newspic:hover img,.hotwen li:hover img,.newlist dt:hover .dyximg div,.guangbox li:hover img,.renwubanner:hover img,.renwuxiao li:hover img,.xuepic:hover img{transform: scale(1.05);}
+
+@font-face {
+  font-family: "elephnt";
+  src: url("../fonts/elephnt.woff2") format("woff2"),
+       url("../fonts/elephnt.woff") format("woff"),
+       url("../fonts/elephnt.ttf") format("truetype"),
+       url("../fonts/elephnt.eot") format("embedded-opentype"),
+       url("../fonts/elephnt.svg") format("svg");
+}
+
+@font-face {
+  font-family: "QUARTO-BOLD";
+  src: url("../fonts/QUARTO-BOLD.woff") format("woff"),
+       url("../fonts/QUARTO-BOLD.ttf") format("truetype"),
+       url("../fonts/QUARTO-BOLD.eot") format("embedded-opentype"),
+       url("../fonts/QUARTO-BOLD.svg") format("svg");
+}
+@font-face {
+  font-family: "MYRIADPRO-LIGHTCONDIT";
+  src: url("../fonts/MYRIADPRO-LIGHTCONDIT.woff2") format("woff2"),
+       url("../fonts/MYRIADPRO-LIGHTCONDIT.woff") format("woff"),
+       url("../fonts/MYRIADPRO-LIGHTCONDIT.ttf") format("truetype"),
+       url("../fonts/MYRIADPRO-LIGHTCONDIT.eot") format("embedded-opentype"),
+       url("../fonts/MYRIADPRO-LIGHTCONDIT.svg") format("svg");
+}
+.swiper-container{
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	list-style: none;
+	padding: 0;
+	z-index: 1;
+}

@@ -1,0 +1,112 @@
+/*seek start*/
+.headerTop ul>li:nth-child(6) a:after{
+	width:100%;
+}
+.seek{
+	padding-top:20px;
+}
+.select{
+	background-color:#f4f4f4;
+	padding:10px 0;
+}
+.select span{
+	width:50%;
+	display:block;
+}
+.select label{
+	float:left;
+	line-height:30px;
+}
+.select select{
+	border:1px solid #b7b7b7;
+	height:30px;
+	background:url(../images/xias.jpg)no-repeat 90% center white;
+	padding:0 10px;
+	color:#333;
+	outline:none;
+	float:left;
+	margin-right:2%;
+    font-family: 'open sans','PingFang SC','Lantinghei SC','Helvetica Neue',Helvetica,Arial,'Microsoft YaHei',"sans-serif";
+    width: auto;
+    min-width:80px;	
+}
+.select input[type='button']{
+    width: 15%;
+    height:30px;
+    background-color: #ff4343;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius:3px;
+    outline: none;
+    cursor: pointer;
+    float: right;	
+}
+.shop{
+	border-bottom: 1px solid #ff4343;
+    border-right: 1px solid #ff4343;	
+}
+.shop th{
+	background-color:#ff4343;
+	line-height:35px;
+	color:white;
+	font-size:14px;
+	text-align:center;
+	font-weight:normal;
+}
+.shop td{
+	padding:10px;
+    border-left:1px solid #ff4343;
+    text-align:center;
+    font-size:12px;	
+}
+.shop tr:nth-of-type(odd){
+	background-color:#e8e8e8;
+}
+.shop tr:nth-of-type(even){
+	background-color:#f4f4f4;
+}
+@media (max-width: 1000px){	
+	.select span:last-of-type em{
+		display:none;
+	}	
+}
+@media (max-width: 768px){
+	.select{
+		padding:0;
+	}
+	.select span{
+		width:calc(100% + 10px);
+		margin-left:-5px;
+		margin-bottom:10px;
+	}
+	.select select{
+		width:calc(25% - 10px);
+		margin:5px;
+		border-radius:3px;
+		height:38px;
+	}
+	.select input[type='button']{
+		height:38px;
+		width:calc(100% - 10px);
+	}
+	.shop th:nth-of-type(1),
+	.shop th:nth-of-type(2),
+	.shop th:nth-of-type(3),
+	.shop th:nth-of-type(5),
+	.shop td:nth-of-type(1),
+	.shop td:nth-of-type(2),
+	.shop td:nth-of-type(3){
+		display:none;
+	}
+	.shop td:nth-of-type(5){
+		display:none;
+	}
+	.shop td:nth-of-type(4){
+		width:60%;
+	}
+	.shop td{
+		line-height:1.5;
+	}
+}
+/*seek end*/

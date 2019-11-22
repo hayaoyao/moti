@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>摩提工房</title>
+	    <meta name="keywords" content="摩提工房" />
+	    <meta name="description" content="摩提工房" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	    <meta name="renderer" content="webkit"> 
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />		
+		<link rel="shortcut icon" href="../favicon.jpeg">
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../css/use.css" />		
+		<link rel="stylesheet" type="text/css" href="../css/seek.css" />
+		<link rel="stylesheet" type="text/css" href="../css/animate.min.css" />		
+		<script src="../js/jquery-1.11.3.js"></script>			
+		<script src="../js/use.js"></script>
+		<script src="selectore.js"></script>
+		<script src="../js/wow.js"></script>
+	</head>
+	<body>
+		<div class="generalize">
+			<div class="navbar navbarSon animated fadeInLeft" data-wow-duration="1s" id="navbar">
+			</div>				
+			<div class="headerTop" id="headerTop">	
+			</div>
+			<div class="nyphonetop clearfix">
+				<div class="waplogo">
+					<a href="/index.html">
+						<img src="../images/logo.png" />
+					</a>
+				</div>
+				<div class="phnavbtn">
+					<span></span>
+				</div>
+			</div>	
+			<div class="introduce">
+				<div class="seek">
+					<div class="select clearfix">
+						<span class="fl clearfix">
+							<select id="pp">
+								<option value="0">品牌</option>
+								<option value="9">西树泡芙</option>
+								<option value="8">摩提工房</option>
+								<option value="7">和米堂</option>
+								<option value="6">一捧饭团</option>
+								<option value="5">凯蒂优果</option>
+								<option value="4">茶庄园</option>
+								<option value="3">小宫山浩二</option>
+								<option value="2">T&C扒房</option>
+							</select>
+							<select id="lx">
+								<option value="0">类型</option>
+								<option value="1">直营</option>
+								<option value="2">加盟</option>
+							</select>
+							<select id="sheng">
+								<option value="0">省份</option>
+							</select>
+                            <select id="shi">
+                                <option value="0">市</option>
+                            </select>							
+						</span>
+                        <span class="fr">
+                            <em>
+                                <label>会员卡：</label><select id="hy"><option value="-1">不限</option><option value="1">支持</option><option value="0">不支持</option></select>
+                                <label>代金券：</label><select id="djq"><option value="-1">不限</option><option value="1">支持</option><option value="0">不支持</option></select>
+                                <label>礼品卡：</label><select id="lpk"><option value="-1">不限</option><option value="1">支持</option><option value="0">不支持</option></select>
+                            </em>
+                            <input type="button" id="find" value="查询">
+                        </span>
+					</div>
+                    <div class="shop">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0" id="table">
+                            <tbody></tbody>
+                        </table>
+
+                    </div>
+                    <div class="page">
+
+                    </div>					
+				</div>				
+			</div>		
+			<div class="footer footerSon clearfix" id="footer">
+			</div>	
+			<div class="copy copyright">
+				<p>Copyright © 2003 - 2019 上海摩提工房食品有限公司<span> 版权所有 沪ICP备12002561号-3</span></p>
+			</div>			
+		</div>
+		<div class="wapMenu" id="wapMenu">
+		</div>	
+		<div class="moveMenu" id="moveMenu">
+		</div>		
+		<div class="online" id="online"></div>
+		<script type="text/javascript">
+			$(function() {
+
+				_province();
+				$("#sheng").change(function() {
+					var code_p = $(this).val();
+					_city(code_p);
+				})
+			})
+			var code_p = "";
+
+			function _province() {
+				$.ajax({
+					contentType: "application/json;charset=utf-8",
+					url: "json/province.json",
+					type: "GET",
+					crossDomain: true,
+					dataType: "json",
+					data: {},
+					success: function(data) {
+						var html = "<option value=\"0\">省份</option>";
+						for(var i = 0; i < data.length; i++) {
+							html += "<option value=\"" + data[i].code_p + "\">" + data[i].name + "</option>";
+						}
+						code_p = $("#sheng").html(html).val();
+						_city(code_p);
+					}
+				});
+			}
+
+			function _city(code_p) {
+				$("#shi").html("<option value=\"0\">市</option>");
+				$.ajax({
+					contentType: "application/json;charset=utf-8",
+					url: "json/city.json",
+					type: "GET",
+					crossDomain: true,
+					dataType: "json",
+					data: {
+						code_p: code_p
+					},
+					success: function(data) {
+						var html = "<option value=\"0\">市</option>";
+						$.each(data, function(key, v) {
+							$('#sheng').change(function() {
+								if($("#sheng").val() != data[key].code_p) {
+									return false
+								} else {
+									html += "<option value=\"" + data[key].code_c + "\">" + data[key].name + "</option>";
+
+								}
+								$("#shi").html(html).val();
+							})
+						});
+
+					}
+				});
+			}
+		
+		</script>	
+	</body>
+</html>

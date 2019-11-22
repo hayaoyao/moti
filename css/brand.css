@@ -1,0 +1,216 @@
+/*puff start*/
+.headerTop ul>li:nth-child(2) a:after{
+	width:100%;
+}
+.puffImg img{
+	width:100%;
+}
+.puffTxt{
+	padding:20px 0;
+}
+.puffTxt h2{
+	font-size:22px;
+	margin-bottom:10px;
+	color:#333;
+}
+.puffTxt p{
+	line-height:22px;
+}
+.puffBox{
+	padding:20px 0;
+}
+.puffBox h3{
+	font-size:14px;
+	color:#333;
+	margin-bottom:20px;
+}
+.puffBox h3 em{
+	font-size:20px;
+	color:#333;
+}
+.puffBox h3 span{
+	float:right;
+	font-weight:normal;
+}
+.puffBox h3 span a{
+	color:#666;
+}
+.kind{
+	padding:30px 0;
+}
+.kind a{
+	display:inline-block;
+	padding:0 20px;
+	line-height:40px;
+	background-color:#ddd;
+	margin-right:20px;
+	border-radius:2px;
+	cursor:pointer;
+}
+.kind a.active{
+	background-color:#ff4343;
+	color:white!important;	
+}
+.kind a:hover{
+	background-color:#ff4343;
+	color:white!important;
+}
+.kindItem{
+	margin-left:-30px;
+	width:calc(100% + 30px);
+}
+.kindItem li{
+	float:left;
+	width:calc(32.4% - 30px);
+	overflow:hidden;
+	margin-left:30px;
+	margin-bottom:30px;
+}
+.kindItem li a{
+	display:block;
+	position:relative;
+}
+.kindImg{
+	width:100%;
+	height:100%;
+	background-color:#d8d8d8;
+}
+.kindLogo{
+	width:100%;
+	height:100%;
+	background-color:#ff4343;
+	position:absolute;
+	left:0;
+	top:0;
+	opacity:0;
+	-webkit-transition: all .5s ease 0s;
+    -moz-transition: all .5s ease 0s;
+    -ms-transition: all .5s ease 0s;
+    -o-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;		
+}
+.kindItem li>a:hover .kindLogo{
+	opacity:1;
+}
+.kindLogo span{
+	height:0;
+	position:absolute;
+	top:50%;
+	left:50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);	
+	font-size:18px;
+	color:white;
+	font-weight:bold;
+	-webkit-transition: all .5s ease 0s;
+    -moz-transition: all .5s ease 0s;
+    -ms-transition: all .5s ease 0s;
+    -o-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;	
+    opacity:0;
+   	z-index:999;
+}
+.kindItem li>a:hover .kindLogo span{
+	opacity:1;
+	height:auto;
+}
+.kindItem li>a:before{
+	content:'';
+	display:block;
+	position:absolute;
+	bottom:18px;
+	right:2.75%;
+	width:0%;
+	height:1px;
+	background-color: #ff9b9b;
+	-webkit-transition: all 1.5s ease 0s;
+    -moz-transition: all 1.5s ease 0s;
+    -ms-transition: all 1.5s ease 0s;
+    -o-transition: all 1.5s ease 0s;
+    transition: all 1.5s ease 0s;	
+    z-index:999;	
+    opacity:0;
+}
+.kindItem li>a:hover:before{
+	width:94.5%;
+	opacity:1;
+}
+.kindItem li>a:after{
+	content:'';
+	display:block;
+	position:absolute;
+	bottom:14.8%;
+	left:2.75%;
+	width:1px;
+	height:0%;
+	background-color: #ff9b9b;
+	-webkit-transition: all 1.5s ease 0s;
+    -moz-transition: all 1.5s ease 0s;
+    -ms-transition: all 1.5s ease 0s;
+    -o-transition: all 1.5s ease 0s;
+    transition: all 1.5s ease 0s;	
+    z-index:999;	
+    opacity:0;
+}
+.kindItem li>a:hover:after{
+	height:72.8%;
+	opacity:1;
+}
+.kindLogo:before{
+	content:'';
+	display:block;
+	position:absolute;
+	top:18px;
+	left:2.75%;
+	width:0%;
+	height:1px;
+	background-color: #ff9b9b;
+	-webkit-transition: all 1.5s ease 0s;
+    -moz-transition: all 1.5s ease 0s;
+    -ms-transition: all 1.5s ease 0s;
+    -o-transition: all 1.5s ease 0s;
+    transition: all 1.5s ease 0s;		
+    z-index:999;
+    opacity:0;
+}
+.kindLogo:hover:before{
+	width:94.5%;
+	opacity:1;
+}
+.kindLogo:after{
+	content:'';
+	display:block;
+	position:absolute;
+	top:14.8%;
+	right:2.75%;
+	width:1px;
+	height:0;
+	background-color: #ff9b9b;
+	-webkit-transition: all 1.5s ease 0s;
+    -moz-transition: all 1.5s ease 0s;
+    -ms-transition: all 1.5s ease 0s;
+    -o-transition: all 1.5s ease 0s;
+    transition: all 1.5s ease 0s;		
+    z-index:999;
+    opacity:0;
+}
+.kindLogo:hover:after{
+	height:72.8%;
+	opacity:1;
+}
+.kindpage{
+	padding:30px 0;
+	text-align:center;
+}
+.kindpage a{
+	font-size:16px;
+	padding:5px 6px;
+	margin:0 10px;
+}
+.kindpage a.active{
+	border-bottom:2px solid #ff4343;
+}
+/*puff end*/

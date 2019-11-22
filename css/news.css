@@ -1,0 +1,28 @@
+/*news start*/
+.headerTop ul>li:nth-child(5) a:after{
+	width:100%;
+}
+.news{
+	padding:20px 0;
+}
+.newVessel{
+	padding:30px 0 40px;
+}
+.newsRight{
+	width:48%;
+	padding:0;
+}
+.newsRight>img{
+	width:100%;
+	height:252px;
+	margin-bottom:0;
+}
+/*news end*/
+@media (max-width: 1000px){
+	.newsRight{
+		width:100%;
+	}
+	.newsLeft{
+		width:100%;
+	}
+}

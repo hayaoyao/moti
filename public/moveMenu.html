@@ -1,0 +1,70 @@
+				<div class="moveClose"><span></span></div>
+				<ul>
+					<li>
+						<a href="../index.html">首页</a>
+					</li>
+					<li class="moveSon">
+						<a href="javascript:void(0)">集团概况</a>
+						<ul class="moveListPart">
+							<li>
+								<a href="../generalize/introduce.html">集团介绍</a>
+							</li>
+							<li>
+								<a href="../generalize/message.html">展会信息</a>
+							</li>
+							<li>
+								<a href="../generalize/develop.html">发展历程</a>
+							</li>
+							<li>
+								<a href="../generalize/yield.html">生产基地</a>
+							</li>
+							<li>
+								<a href="../generalize/relation.html">联系我们</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="../brand/brand.html">品牌会</a>
+					</li>
+					<li class="moveSon">
+						<a href="javascript:void(0)">会员中心</a>
+						<ul class="moveListPart">
+							<li>
+								<a href="../member/particulars.html">会员介绍</a>
+							</li>
+							<li>
+								<a href="../member/protocol.html">会员协议</a>
+							</li>
+							<li>
+								<a href="../member/problem.html">常见问题</a>
+							</li>
+							<li>
+								<a href="../seek/seek.html">会员门店</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="../join/join.html">加盟申请</a>
+					</li>
+					<li class="moveSon">
+						<a href="javascript:void(0)">新闻中兴</a>
+						<ul class="moveListPart">
+							<li>
+								<a href="../news/newsActivity.html">最新活动</a>
+							</li>
+							<li>
+								<a href="../news/newsFirm.html">企业新闻</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="../seek/seek.html">店内搜索</a>
+					</li>
+				</ul>	
+<script type="text/javascript">
+    $('.moveSon').click(function () {
+        $(this).siblings("li").find(".moveListPart").slideUp()
+        $(this).find(".moveListPart").slideToggle();
+        $(this).toggleClass("curre").siblings("li").removeClass("curre")		
+	})		
+</script>				
